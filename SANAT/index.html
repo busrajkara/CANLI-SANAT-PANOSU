@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canlı Sanat Panosu</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+        }
+
+        header {
+            width: 100%;
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ffcc00;
+        }
+
+        canvas {
+            border: 2px solid #fff;
+            margin-top: 20px;
+            background-color: #fff;
+            background-position: 0cap;
+        }
+
+        .buttons {
+            margin-top: 15px;
+        }
+
+        button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Canlı Sanat Panosu
+        <nav>
+            <a href="index.html">Pano</a>
+            <a href="#clearCanvas" onclick="clearCanvas()">Temizle</a>
+            <a href="#saveCanvas" onclick="saveCanvas()">Kaydet</a>
+        </nav>
+    </header>
+    <canvas id="sanatPanosu" width="800" height="600"></canvas>
+    <div class="buttons">
+        <button id="clearCanvas" onclick="clearCanvas()">Temizle</button>
+        <button id="saveCanvas" onclick="saveCanvas()">Kaydet</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
